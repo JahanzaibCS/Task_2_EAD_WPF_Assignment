@@ -1,0 +1,44 @@
+﻿<Window x:Class="Task_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#FFF5E7EF">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="432" RenderTransformOrigin="-0.175,0.71">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="User Name" FontSize="20" Margin="66,6,10,13"></Label>
+        <Label Grid.Row="1" Grid.Column="0" Content="Password" FontSize="20" Margin="66,12,10,0" RenderTransformOrigin="0.673,0.522"></Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="UserName" FontSize="15" Margin="0,6,0,14"/>
+        <PasswordBox PasswordChar="*" Grid.Row="1" Grid.Column="1" Name="Password" Margin="0,13,0,10" FontSize="15" Visibility="Visible">
+
+        </PasswordBox>
+        <TextBox  Grid.Row="1" Grid.Column="1" Name="showPassword" Margin="0,13,0,10" FontSize="15" Visibility="Hidden"></TextBox>
+
+        <Button Grid.Row="2" Grid.Column="1" Content="Submit" Margin="10,5,100,10" FontSize="20" Click="Submit"></Button>
+        <Button Name="show1" Grid.Row="1" Grid.Column="1" Margin="174,0,0,0" Click="Show" HorizontalAlignment="Left" Width="30" Visibility="Visible" Grid.ColumnSpan="2" Height="29.2" RenderTransformOrigin="0.547,0.837" >
+            <Button.Background>
+                <ImageBrush ImageSource="/show.png"/>
+            </Button.Background>
+        </Button>
+        <Button Name="hide" Grid.Row="1" Grid.Column="2" Width="30" Height="29.2" Click="Hide" BorderThickness="0,1,1,1" SnapsToDevicePixels="True" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/hide.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
