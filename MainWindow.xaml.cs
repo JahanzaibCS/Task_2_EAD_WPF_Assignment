@@ -52,6 +52,9 @@ namespace Task_2
             if (userName.Equals("admin") && password.Equals("admin"))
             {
                 MessageBox.Show("You have looged in successfully");
+                UserName.Text = "";
+                showPassword.Text = "";
+                Password.Password = "";
             }
             else
             {
